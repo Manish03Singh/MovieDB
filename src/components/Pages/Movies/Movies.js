@@ -16,7 +16,7 @@ const Movies = () => {
     const genreUrl = useGenre(selectedGenres)
 
     const fetchMovies = async() => {
-        const {data} = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&include_adult=true&include_video=false&page=1&sort_by=popularity.desc&page=${page}&with_genres=${genreUrl}`)
+        const {data} = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&include_adult=false&include_video=false&page=1&sort_by=popularity.desc&page=${page}&with_genres=${genreUrl}`)
         //console.log(data)
         setContent(data.results)
         if(data.total_pages < 500)
