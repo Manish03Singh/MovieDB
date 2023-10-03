@@ -24,6 +24,7 @@ const Search = () => {
 
     const fetchSearch = async() => {
         try {
+            //console.log(`https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${API_KEY}&query=${searchText}&page=${page}&include_adult=false`)
             const { data } = await axios.get(`https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${API_KEY}&query=${searchText}&page=${page}&include_adult=true`);
             setContent(data.results);
             if(data.total_pages < 500)
@@ -31,6 +32,7 @@ const Search = () => {
           } catch (error) {
             console.error(error);
           }
+        //console.log(content)
     }
 
     useEffect(() => {
@@ -86,7 +88,7 @@ const Search = () => {
                             poster={c.poster_path}
                             title={c.title || c.name}
                             date={c.first_air_date || c.release_date}
-                            media_type={c.media_type}
+                            media_type= {type ? "tv" : "movie"}
                             vote_average={c.vote_average}
                             adult={c.adult}
                         />

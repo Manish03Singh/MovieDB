@@ -2,12 +2,13 @@ import React from 'react'
 import {img_300, unavailable} from '../../Config/Config'
 import './SingleContent.css'
 import { Badge } from '@mui/material'
+import ContentModal from '../ContentModal/ContentModal'
 
 const SingleContent = ( {id ,poster ,title ,date ,media_type ,vote_average, adult} ) => {
     vote_average = Math.round(vote_average*10)/10;
 
     return (
-            <div className='media'>
+            <ContentModal media_type={media_type} id={id}>
                 <Badge 
                     badgeContent={vote_average}
                     color={vote_average > 6.5 ? (vote_average > 8.5 ? "success" : "primary") : "secondary"}
@@ -29,11 +30,11 @@ const SingleContent = ( {id ,poster ,title ,date ,media_type ,vote_average, adul
                 
                 <b className='title'>{title}</b>
                 <span className='subTitle'>
-                    {media_type === "movie" ? "Movie" : "TV Series"}
+                    {media_type === "movie" ? "Movie" : "tv"}
                     <span className='subTitle'>{date}</span>
                 </span>
         
-            </div>
+            </ContentModal>
       )
 }
 

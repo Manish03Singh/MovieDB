@@ -4,9 +4,10 @@ import { createTheme } from '@mui/material/styles'
 import React from 'react'
 
 const darkTheme = createTheme({
-    palette: {
-        type:"light",
-    }
+    palette:{
+        type:"dark",
+    },
+    color:"#ffffff !important",
 })
 
 const CustomPagination = ({setPage, noOfPages=10}) => {
@@ -23,6 +24,7 @@ const CustomPagination = ({setPage, noOfPages=10}) => {
                 display: "flex",
                 justifyContent: "center",
                 marginTop: 10,
+                color:"#ffffff !important",
             }}
         >   
             <ThemeProvider theme={darkTheme}>
@@ -30,7 +32,7 @@ const CustomPagination = ({setPage, noOfPages=10}) => {
                     count={noOfPages} 
                     onChange={(e) => pageChangehandler(e.target.textContent)}
                     variant="outlined"
-                    color='primary'
+                    color='secondary'
                     hideNextButton
                     hidePrevButton    
                 />

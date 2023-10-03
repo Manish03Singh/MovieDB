@@ -22,7 +22,7 @@ const Genres = ({ type, selectedGenres, setSelectedGenres, genres, setGenres, se
 
     const fetchGenres = async() => {
         const {data} = await axios(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${API_KEY}`)
-        console.log(data)
+        //console.log(data)
         setGenres(data.genres)
     }
 

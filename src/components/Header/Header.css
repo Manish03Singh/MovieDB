@@ -4,6 +4,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     background-color: #121212;
     font-family: "Montserrat", sans-serif;
@@ -19,4 +20,18 @@
       padding-top: 15px;
       font-size: 6.4vw;
     }
+  }
+
+  .animate{
+    &:hover{
+      animation: rotation 0.25s infinite ease-in-out;
+    }
+  }
+
+  @keyframes rotation {
+    0%   {transform: rotate(0deg);}
+    25%   {transform: rotate(90deg);}
+    50%   {transform: rotate(180deg);}
+    75%   {transform: rotate(270deg);}
+    100%   {transform: rotate(360deg);}
   }
