@@ -14,4 +14,5 @@
 <p>Cast Information: Explore the cast of a movie or TV series.</p>
 <p>Trailers: Watch trailers for movies and series.</p>
 
+# Connect
 <p>Visit me on <a href="https://www.linkedin.com/in/manish-kumar-singh-12a28a190/">linkedin</a> and <a href="https://twitter.com/Manish_03_Singh">twitter</a></p>
